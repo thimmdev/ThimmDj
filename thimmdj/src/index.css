@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap");
+@import "./styles/tokens.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ajuste de padding de seção em mobile */
+@media (max-width: 640px) {
+  :root {
+    --spacing-section-y: 64px;
+  }
+}
+
+/* Navbar link — underline animado */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.5px;
+  background: var(--color-text-primary);
+  transition: width var(--duration-normal) var(--ease-out);
+}
+.nav-link:hover::after {
+  width: 100%;
+}

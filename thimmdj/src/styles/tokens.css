@@ -1,0 +1,330 @@
+/* ============================================================
+   DJ THIMM — Design Tokens
+   Sistema de design: Luxury Minimalist · Preto + Branco Puro
+   Gerado para uso com React + Tailwind (Vite)
+   ============================================================ */
+
+/* -----------------------------------------------------------
+   1. IMPORT DE FONTES
+   Cole isso também no seu index.html <head> para garantir:
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+   ----------------------------------------------------------- */
+
+:root {
+
+  /* -----------------------------------------------------------
+     2. CORES — Paleta principal
+     ----------------------------------------------------------- */
+
+  /* Fundos */
+  --color-bg-base:       #0a0a0a;   /* fundo principal da página */
+  --color-bg-surface:    #0f0f0f;   /* seções alternadas (Música, Contato) */
+  --color-bg-card:       #141414;   /* cards, inputs, depoimentos */
+  --color-bg-hover:      #1a1a1a;   /* hover em cards e linhas */
+  --color-bg-overlay:    rgba(0, 0, 0, 0.92); /* lightbox, menu mobile */
+
+  /* Texto */
+  --color-text-primary:  #ffffff;   /* títulos, texto em destaque */
+  --color-text-secondary:#aaaaaa;   /* corpo de texto, parágrafos */
+  --color-text-muted:    #555555;   /* placeholders, labels desabilitados */
+  --color-text-hint:     #888888;   /* metadados, datas, categorias */
+
+  /* Bordas */
+  --color-border-subtle: rgba(255, 255, 255, 0.06);  /* cards em repouso */
+  --color-border-default:rgba(255, 255, 255, 0.12);  /* inputs, divisores */
+  --color-border-strong: rgba(255, 255, 255, 0.25);  /* hover em cards */
+  --color-border-focus:  rgba(255, 255, 255, 1.00);  /* input focado */
+
+  /* Acento único — estrelas de depoimento (único desvio do B&W) */
+  --color-accent-gold:   #d4b483;
+
+  /* Navbar */
+  --color-nav-bg-transparent: rgba(10, 10, 10, 0);
+  --color-nav-bg-solid:       rgba(10, 10, 10, 0.96);
+  --color-nav-border:         rgba(255, 255, 255, 0.08);
+
+  /* Botões */
+  --color-btn-outline-border:  rgba(255, 255, 255, 1.00);
+  --color-btn-outline-text:    #ffffff;
+  --color-btn-outline-hover-bg:#ffffff;
+  --color-btn-outline-hover-text: #0a0a0a;
+
+  --color-btn-filled-bg:       #ffffff;
+  --color-btn-filled-text:     #0a0a0a;
+  --color-btn-filled-hover-bg: transparent;
+  --color-btn-filled-hover-text: #ffffff;
+
+  /* -----------------------------------------------------------
+     3. TIPOGRAFIA
+     ----------------------------------------------------------- */
+
+  --font-display: 'Bebas Neue', sans-serif;   /* nome do artista, títulos de seção */
+  --font-body:    'DM Sans', sans-serif;      /* nav, body, labels, botões */
+
+  /* Pesos */
+  --font-weight-light:   300;
+  --font-weight-regular: 400;
+  --font-weight-medium:  500;
+
+  /* Tamanhos — escala tipográfica */
+  --font-size-hero:      clamp(80px, 14vw, 180px);  /* nome DJ THIMM no hero */
+  --font-size-h1:        clamp(42px, 6vw, 72px);    /* títulos de seção grandes */
+  --font-size-h2:        clamp(32px, 4vw, 52px);    /* subtítulos de seção */
+  --font-size-h3:        clamp(20px, 2.5vw, 28px);  /* títulos de cards */
+  --font-size-nav:       13px;
+  --font-size-body:      16px;
+  --font-size-body-sm:   15px;
+  --font-size-label:     11px;
+  --font-size-meta:      12px;
+  --font-size-stat:      clamp(36px, 5vw, 52px);    /* números de destaque (shows, anos) */
+
+  /* Line height */
+  --line-height-tight:   1.1;   /* títulos grandes */
+  --line-height-normal:  1.6;
+  --line-height-relaxed: 1.8;   /* corpo de texto */
+
+  /* Letter spacing */
+  --tracking-wide:   0.08em;   /* nav links uppercase */
+  --tracking-wider:  0.15em;   /* logo, labels de seção */
+  --tracking-widest: 0.20em;   /* taglines, subtítulos decorativos */
+
+  /* -----------------------------------------------------------
+     4. ESPAÇAMENTOS
+     ----------------------------------------------------------- */
+
+  /* Seções */
+  --spacing-section-y:        120px;   /* padding vertical das seções (desktop) */
+  --spacing-section-y-mobile: 64px;    /* padding vertical das seções (mobile) */
+
+  /* Containers */
+  --spacing-container-x:       clamp(24px, 6vw, 96px);  /* padding lateral da página */
+  --spacing-container-max:     1280px;                   /* largura máxima do conteúdo */
+
+  /* Gaps internos */
+  --spacing-gap-sm:  8px;
+  --spacing-gap-md:  16px;
+  --spacing-gap-lg:  24px;
+  --spacing-gap-xl:  32px;
+  --spacing-gap-2xl: 48px;
+  --spacing-gap-3xl: 64px;
+
+  /* Cards */
+  --spacing-card-padding: 32px;
+
+  /* Botões */
+  --spacing-btn-x: 36px;
+  --spacing-btn-y: 14px;
+  --spacing-btn-gap: 12px;   /* gap entre botões lado a lado */
+
+  /* -----------------------------------------------------------
+     5. BORDAS E FORMAS
+     ----------------------------------------------------------- */
+
+  --radius-none:  0px;
+  --radius-sm:    2px;    /* botões, cards do site */
+  --radius-md:    4px;    /* inputs */
+  --radius-lg:    8px;    /* cards maiores */
+
+  /* Linhas decorativas */
+  --border-thin:  0.5px;
+  --border-label: 40px;  /* largura da linha ao lado do label de seção */
+
+  /* -----------------------------------------------------------
+     6. NAVBAR
+     ----------------------------------------------------------- */
+
+  --nav-height:          72px;
+  --nav-height-mobile:   60px;
+  --nav-logo-size:       22px;
+  --nav-link-size:       var(--font-size-nav);
+  --nav-transition:      background 0.3s ease, border-color 0.3s ease;
+  --nav-z:               1000;
+
+  /* -----------------------------------------------------------
+     7. ANIMAÇÕES E TRANSIÇÕES
+     ----------------------------------------------------------- */
+
+  /* Durations */
+  --duration-fast:    150ms;
+  --duration-normal:  300ms;
+  --duration-slow:    600ms;
+  --duration-enter:   800ms;   /* animação de entrada de elementos */
+
+  /* Easings */
+  --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-inout: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Scroll reveal (valores iniciais — use com Framer Motion / IntersectionObserver) */
+  --reveal-y:       30px;   /* translateY inicial antes de aparecer */
+  --reveal-opacity: 0;
+  --reveal-stagger: 100ms;  /* delay entre filhos em stagger */
+
+  /* Cursor customizado */
+  --cursor-size-default: 12px;
+  --cursor-size-hover:   32px;
+  --cursor-lerp:         0.15;  /* fator de suavização (use em requestAnimationFrame) */
+
+  /* Loading screen */
+  --loading-duration: 1200ms;
+  --loading-fade:     400ms;
+
+  /* -----------------------------------------------------------
+     8. BREAKPOINTS (referência — use com Tailwind ou media queries)
+     ----------------------------------------------------------- */
+
+  /* mobile:  < 640px  */
+  /* tablet:  640px – 1024px  */
+  /* desktop: > 1024px */
+
+  /* -----------------------------------------------------------
+     9. Z-INDEX
+     ----------------------------------------------------------- */
+
+  --z-base:     0;
+  --z-above:    10;
+  --z-overlay:  100;
+  --z-nav:      1000;
+  --z-cursor:   9999;
+  --z-loading:  10000;
+
+  /* -----------------------------------------------------------
+     10. HERO — valores específicos
+     ----------------------------------------------------------- */
+
+  --hero-overlay-start:  rgba(0, 0, 0, 0.80);  /* overlay base do fundo do hero */
+  --hero-overlay-end:    rgba(0, 0, 0, 0.20);  /* topo do hero (mais transparente) */
+  --hero-tagline-size:   18px;
+  --hero-label-size:     12px;
+  --hero-label-tracking: 0.20em;
+
+  /* -----------------------------------------------------------
+     11. GALERIA
+     ----------------------------------------------------------- */
+
+  --gallery-gap:     8px;
+  --gallery-columns: 3;   /* desktop */
+  --lightbox-bg:     rgba(0, 0, 0, 0.95);
+
+  /* -----------------------------------------------------------
+     12. FORMULÁRIO DE CONTATO
+     ----------------------------------------------------------- */
+
+  --form-field-border:       rgba(255, 255, 255, 0.20);
+  --form-field-border-focus: rgba(255, 255, 255, 1.00);
+  --form-field-text:         #ffffff;
+  --form-field-placeholder:  #555555;
+  --form-field-font-size:    15px;
+  --form-field-padding-y:    12px;
+
+}
+
+/* -----------------------------------------------------------
+   RESET BASE — aplique no index.css após os tokens
+   ----------------------------------------------------------- */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-normal);
+  overflow-x: hidden;
+  cursor: none; /* oculta cursor padrão para o cursor customizado */
+}
+
+/* Cursor padrão em dispositivos touch (sem cursor customizado) */
+@media (hover: none) {
+  body { cursor: auto; }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+/* -----------------------------------------------------------
+   UTILITÁRIOS BASE
+   ----------------------------------------------------------- */
+
+/* Container centralizado com padding lateral */
+.container {
+  width: 100%;
+  max-width: var(--spacing-container-max);
+  margin-inline: auto;
+  padding-inline: var(--spacing-container-x);
+}
+
+/* Padding padrão de seção */
+.section-padding {
+  padding-block: var(--spacing-section-y);
+}
+
+@media (max-width: 640px) {
+  .section-padding {
+    padding-block: var(--spacing-section-y-mobile);
+  }
+}
+
+/* Label de seção (ex: "SOBRE", "MÚSICA") com linha lateral */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-text-hint);
+  margin-bottom: 24px;
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: var(--border-label);
+  height: var(--border-thin);
+  background: var(--color-text-hint);
+  flex-shrink: 0;
+}
+
+/* Tipografia de exibição */
+.display {
+  font-family: var(--font-display);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+}
+
+/* Scrollbar customizada (desktop) */
+@media (min-width: 1024px) {
+  ::-webkit-scrollbar        { width: 4px; }
+  ::-webkit-scrollbar-track  { background: #1a1a1a; }
+  ::-webkit-scrollbar-thumb  { background: #ffffff; border-radius: 2px; }
+}
